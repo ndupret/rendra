@@ -1,0 +1,158 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('assets/birthday_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Styling for navigation menu */
+.navigation {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background for nav */
+    padding: 15px;
+    width: 100%; /* Menu fills the full width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+}
+
+.navigation ul {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align the nav menu */
+}
+
+.navigation ul li {
+    margin: 0 15px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #FF1493;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    color: #FF6347;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%; /* This allows the card to shrink to fit smaller screens */
+    backdrop-filter: blur(10px); /* Blur effect */
+    margin-top: 20px; /* Add margin for better spacing */
+}
+
+h1 {
+    color: #FF1493;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+img.photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+}
+
+.message-box:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    transform: rotate(45deg);
+    border-bottom: none;
+    border-right: none;
+}
+
+.message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.message p {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%; /* Mengatur lebar tombol agar memenuhi lebar kontainer */
+    background-color: #ff69b4; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    padding: 10px 20px; /* Padding untuk kenyamanan */
+    margin-top: 20px; /* Jarak atas dari elemen lain */
+    font-size: 1.2em; /* Ukuran font */
+    border-radius: 25px; /* Sudut membulat pada tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    transition: background-color 0.3s; /* Transisi saat hover */
+    animation: pulse 1.5s infinite; /* Animasi pulse */
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+
+/* Media query for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Smaller font for headings */
+    }
+
+    .message-box {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+
+    .navigation ul li a {
+        font-size: 1rem; /* Smaller font for mobile navigation */
+    }
+
+    .card {
+        width: 95%; /* Make the card wider on smaller screens */
+    }
+}

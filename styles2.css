@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Maksimal lebar untuk layar besar */
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid responsif */
+    grid-gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Query untuk Mobile (Layar kecil) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Ukuran font lebih kecil di mobile */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Lebih kecil untuk mobile */
+    }
+
+    body {
+        padding: 10px; /* Ruang padding lebih kecil di mobile */
+    }
+}
+
+/* Media Query untuk Layar Sangat Besar (di atas 1200px) */
+@media (min-width: 1200px) {
+    .gallery-container {
+        max-width: 1400px; /* Lebar maksimum lebih besar untuk layar sangat besar */
+    }
+}
+
+button {
+    width: 100%; /* Mengatur lebar tombol agar memenuhi lebar kontainer */
+    background-color: #ff69b4; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    padding: 10px 20px; /* Padding untuk kenyamanan */
+    margin-top: 20px; /* Jarak atas dari elemen lain */
+    font-size: 1.2em; /* Ukuran font */
+    border-radius: 25px; /* Sudut membulat pada tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    transition: background-color 0.3s; /* Transisi saat hover */
+    animation: pulse 1.5s infinite; /* Animasi pulse */
+}
+
+/* Animasi pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Ukuran normal */
+    }
+    50% {
+        transform: scale(1.05); /* Ukuran sedikit lebih besar */
+    }
+    100% {
+        transform: scale(1); /* Kembali ke ukuran normal */
+    }
+}
+
+button:hover {
+    background-color: #ff1493;
+}
